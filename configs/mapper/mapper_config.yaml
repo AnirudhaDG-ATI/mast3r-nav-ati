@@ -10,7 +10,7 @@ image:
 # Model settings
 model:
   name: "mast3r"
-  path: "/home/onyx/work_dirs/vanshg/navigation/sg_habitat/libs/matcher/image_matching_models/matching/model_weights/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth"
+  path: "/home/anirudhadg/mast3r-nav-ati/mast3r-nav/checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth"
   device: "cuda"
   subsample_or_initxy1: 8
 
@@ -50,17 +50,17 @@ compression:
 # Scene settings (unified for single and multi)
 scenes:
   # Parent directory containing scene subdirectories
-  base_dir: "/scratch2/public_scratch/toponav/indoor-topo-loc/datasets/hm3d_navigation/hm3d_iin_val_320x240"
+  base_dir: "/home/anirudhadg/mast3r-nav-ati/mast3r-nav/data/recordings"
   
   # Toggle between single and multi-scene mode
   multi_scene: false
   
   # Base output directory (optional). If set, outputs go to base_out_dir/scene_name/
   # If null, outputs go to the scene directory itself
-  base_out_dir: /scratch2/public_scratch/vanshg/mast3r-nav/hm3d_val_mapping_pairwise_match_subsample_v3
+  base_out_dir: /home/anirudhadg/mast3r-nav-ati/mast3r-nav/data/maps
   
   # Single scene mode: scene name (used when multi_scene=false)
-  scene_name: "mL8ThkuaVTM_0000000_bed_26_"
+  scene_name: "traj_000"
   
   # Multi-scene mode options:
   scene_list_file: /home/onyx/work_dirs/vanshg/navigation/mast3r-nav/episodes_removing_blacklist.txt   # txt file with scene names (1 per line), takes priority
@@ -75,12 +75,12 @@ goal:
   #   config       - Goal from config (image_idx, pixel_x, pixel_y)
   #   episode      - Infer goal from episode folder (semantic mask + centroid)
   #   update_graph - Load existing base graph, add goal from config
-  mode: "episode"
+  mode: "config"
   
   # For mode="config" or "update_graph": manual goal specification
-  image_idx: 50
-  pixel_x: 160
-  pixel_y: 120
+  image_idx: 47
+  pixel_x: 450
+  pixel_y: 80
   
   # For mode="update_graph": path to existing base graph (relative to scene dir)
   base_graph_path: null  # e.g., "graph_base_320x240.pkl.b2s"
