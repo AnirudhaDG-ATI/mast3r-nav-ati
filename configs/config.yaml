@@ -36,7 +36,7 @@ costmap_filename: "costmaps_320x240_EC_NONE_NC_NONE_NCF_10.npz"
 # results_dirpath: "/home/onyx/work_dirs/vanshg/navigation/mast3r-nav/outputs_hm3d_val_pairwise_match_subsample_v2"
 # results_dirpath: "/home/onyx/work_dirs/vanshg/navigation/mast3r-nav/outputs_hm3d_val_mapping_04ed325_commit_sg_habitat"
 # results_dirpath: "/home/onyx/work_dirs/vanshg/navigation/mast3r-nav/outputs_hm3d_val_mapping_04ed325_commit_control_sg_habitat"
-results_dirpath: "/home/onyx/work_dirs/vanshg/navigation/mast3r-nav/outputs_hm3d_val_mapping_04ed325_commit_sg_habitat_new_controller_goal_uses_context"
+results_dirpath: "/home/anirudhadg/mast3r-nav-ati/mast3r-nav"
 
 # ============================================
 # Episode Selection
